@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Gabriel Cavalcante</title>
+	<link href="https://gcavalcante.com/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://gcavalcante.com"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-08-14T00:00:00+00:00</updated>
+	<id>https://gcavalcante.com/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Tool Tips #1</title>
+		<published>2022-08-14T00:00:00+00:00</published>
+		<updated>2022-08-14T00:00:00+00:00</updated>
+		<link href="https://gcavalcante.com/posts/tool-tips-1/" type="text/html"/>
+		<id>https://gcavalcante.com/posts/tool-tips-1/</id>
+		<content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;tooltip&lt;&#x2F;strong&gt;, ... is a common graphical user interface (GUI) element in which, when hovering over a screen element or component, a text box displays information about that element.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tooltip&quot;&gt;Wikipedia&lt;&#x2F;a&gt;, read on 2022-08-14&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I just tried to make some fun about the name, but to be more precise the title should be something more like &amp;quot;&lt;strong&gt;Tools that might help you too&lt;&#x2F;strong&gt;&amp;quot;. It is an article where I&#x27;ll show some useful software to do something. Yeah, pretty generic, right?&lt;&#x2F;p&gt;
+&lt;p&gt;In this article, I&#x27;ll show two apps that I use. The first one is about formatting a PC. It&#x27;s something trivial that we usually do over time, when we update to a new version of the OS, or  maybe when we want to try a different Linux distro. &lt;&#x2F;p&gt;
+&lt;p&gt;Last but not least, I&#x27;ll show a package manager for Windows.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;bootable-usb-drive-with-simple-steps-to-update&quot;&gt;Bootable USB drive with simple steps to update&lt;&#x2F;h1&gt;
+&lt;p&gt;I have already formated a lot of USB sticks to put another Linux distro or version of Windows in it. It takes time and it&#x27;s boring to do it every time: you install some software to help you create a bootable USB stick, or follow the commands with the terminal. To solve this, I&#x27;ve discovered &lt;a href=&quot;https:&#x2F;&#x2F;www.ventoy.net&#x2F;en&#x2F;index.html&quot;&gt;Ventoy&lt;&#x2F;a&gt; and it&#x27;s a lifesaver.&lt;&#x2F;p&gt;
+&lt;p&gt;After installing it in one USB drive, I just need to add the ISO to the right partition, and &lt;em&gt;voilà&lt;&#x2F;em&gt;, it&#x27;s ready!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-example.png#center&quot; alt=&quot;Windows Explorer at partition E: with three different images&quot; title=&quot;My Ventoy partition&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Example of the selection of ISO when booting through Ventoy:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-select-iso.png#center&quot; alt=&quot;Ventoy ISO selection screen with a list of different ISO to boot the PC from&quot; title=&quot;Ventoy screen&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;install-and-update-all-your-programs-at-once&quot;&gt;Install and update all your programs at once&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-brand.png#center&quot; alt=&quot;A small blue rock before the word Ninite in blue&quot; title=&quot;Ninite brand&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This software, called &lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;Ninite&lt;&#x2F;a&gt;, is a masterpiece made for Windows OS. It will help you install a lot of software with a single click. You just have to select the programs you want to install and Ninite will create a very small installer file for you. Plus, it will automatically reject all toolbars when installing the software.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-options.png#center&quot; alt=&quot;List of apps you can choose&quot; title=&quot;Ninite list of apps&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Run the Ninite installer and it&#x27;ll install all the programs you selected. Simple like that.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Git Submodules, an Overview</title>
+		<published>2022-08-08T00:00:00+00:00</published>
+		<updated>2022-08-08T00:00:00+00:00</updated>
+		<link href="https://gcavalcante.com/posts/git-submodules-an-overview/" type="text/html"/>
+		<id>https://gcavalcante.com/posts/git-submodules-an-overview/</id>
+		<content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;p&gt;My first contact with the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; was a happy accident when looking at how to create my blog. Reading the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;&#x27;s documentation. It was recommended to use when adding a new theme to the project. &lt;&#x2F;p&gt;
+&lt;p&gt;With the flow to update, fix, and improve my blog, I had some issues understanding how the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; works. So, I&#x27;ve decided to create this article with some information. Enjoy.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-a-submodule&quot;&gt;What is a submodule?&lt;&#x2F;h1&gt;
+&lt;p&gt;The submodule allows you to add another git project inside your project. But why? Have you ever tried to get some project to your project? Probably the approach will be: download the repository (&lt;em&gt;zip file&lt;&#x2F;em&gt;) and unzip your project. If you need to update, you&#x27;ll do it everything again. Seems like a lot of work, and the submodule will remove for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This submodule will not be pushed with your commits. And when downloading the project will also download the submodule. The update will be one git command.&lt;&#x2F;p&gt;
+&lt;p&gt;But it&#x27;s not just that. You will be able to keep your custom codes in the library, making it easy to merge when a new version comes out.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;adding-a-submodule&quot;&gt;Adding a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;The command to add a submodule is a simple line:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; git submodule &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;url&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, you need more information before continuing. The &lt;strong&gt;URL&lt;&#x2F;strong&gt; is a git endpoint to download the project. And the &lt;strong&gt;name&lt;&#x2F;strong&gt; is how you want to have this submodule called on your project.&lt;&#x2F;p&gt;
+&lt;p&gt;Example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; git submodule https:&#x2F;&#x2F;github.com&#x2F;gscavalcante&#x2F;apollo.git themes&#x2F;apollo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This execution will create a folder &lt;code&gt;themes&#x2F;apollo&lt;&#x2F;code&gt; with the content of this repository in the last commit at the root of your project. Since my example have a name separated by a slash (&lt;em&gt;&#x2F;&lt;&#x2F;em&gt;), it will create a folder with the submodule inside.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; README.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; content
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;│&lt;&#x2F;span&gt;&lt;span&gt;   └── about.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; sass
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; static
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; templates
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; themes
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; apollo
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt; directories, 2 files
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now you can use everything from this project on your own.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;h2&gt;
+&lt;p&gt;Another way to add the submodule is with a branch, so it&#x27;ll not stay at a specific &lt;em&gt;SHA1&lt;&#x2F;em&gt; when updating. To accomplish this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; git submodule&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt; -b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;branch&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;url&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But if you already have the submodule added, you can change the &lt;code&gt;.gitmodules&lt;&#x2F;code&gt; file, for example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;.gitmodules&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-.gitmodules &quot;&gt;&lt;code class=&quot;language-.gitmodules&quot; data-lang=&quot;.gitmodules&quot;&gt;&lt;span style=&quot;color:#ff7733;&quot;&gt;[submodule &amp;quot;&amp;lt;name&amp;gt;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt;path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;= &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;path&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;= &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;url&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt;branch &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;= &amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;branch&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Add the option &lt;strong&gt;branch&lt;&#x2F;strong&gt; with the one you want to get this submodule.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;update-a-submodule&quot;&gt;Update a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;Update from a remote repository is easy when you track with a branch. For this, run the command below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule update&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt; --remote
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If your submodule is not following from a branch, then go back and read &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;git-submodules-an-overview&#x2F;#adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-delete-a-submodule&quot;&gt;How to Delete a Submodule&lt;&#x2F;h1&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; git rm &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;submodule-name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But the old directory will stay at &lt;code&gt;.git&#x2F;modules&#x2F;&amp;lt;path-to_submodule&amp;gt;&lt;&#x2F;code&gt;. Delete this folder, and you can download another submodule with the same name without a problem.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#0f1419;color:#bfbab0;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#ffb454;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span&gt; rm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt; -rf&lt;&#x2F;span&gt;&lt;span&gt; .git&#x2F;modules&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;path-to_submodule&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29668;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+</feed>
