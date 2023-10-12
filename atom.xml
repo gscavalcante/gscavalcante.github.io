@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Gabriel Cavalcante</title>
+    <link href="https://gcavalcante.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://gcavalcante.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-10-12T00:00:00+00:00</updated>
+    <id>https://gcavalcante.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>What is SOLID?</title>
+        <published>2023-10-10T00:00:00+00:00</published>
+        <updated>2023-10-12T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/solid/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/solid/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is part of a series about tech interview.
+Go to &lt;a href=&quot;..&#x2F;tech-interview&quot;&gt;Tech interview&lt;&#x2F;a&gt; to read more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;what-is-solid&quot;&gt;What is SOLID?&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;em&gt;SOLID&lt;&#x2F;em&gt; is a acronym for five principles of Object Oriented Design, and stands for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#single-responsibility-principle-srp&quot;&gt;&lt;strong&gt;S&lt;&#x2F;strong&gt; - Single-responsibility Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#open-closed-principle-ocp&quot;&gt;&lt;strong&gt;O&lt;&#x2F;strong&gt; - Open-closed Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#liskov-substitution-principle-lsp&quot;&gt;&lt;strong&gt;L&lt;&#x2F;strong&gt; - Liskov Substitution Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#interface-segregation-principle-isp&quot;&gt;&lt;strong&gt;I&lt;&#x2F;strong&gt; - Interface Segregation Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#dependency-inversion-principle-dip&quot;&gt;&lt;strong&gt;D&lt;&#x2F;strong&gt; - Dependency Inversion Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;⚠️ &lt;em&gt;Here you will see only the main phrase about every principle. The best place
+to get this information is from the article
+&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;&#x2F;a&gt;
+wrote by Ugonna Thelma&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;single-responsibility-principle-srp&quot;&gt;Single-Responsibility Principle (SRP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A class should have one, and only one, reason to change. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The idea behind the Single-Responsibility Principle (SRP) is that a class or module
+has a single responsibility or task to perform (Boris, 2023).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;open-closed-principle-ocp&quot;&gt;Open-Closed Principle (OCP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You should be able to extend a classes behavior, without modifying it. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;liskov-substitution-principle-lsp&quot;&gt;Liskov Substitution Principle (LSP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Derived classes must be substitutable for their base classes. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;interface-segregation-principle-isp&quot;&gt;Interface Segregation Principle (ISP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make fine grained interfaces that are client specific. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;dependency-inversion-principle-dip&quot;&gt;Dependency Inversion Principle (DIP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Depend on abstractions, not on concretions. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Oloruntoba, Samuel. (2020, September 21). SOLID: The First 5 Principles of Object Oriented Design. &lt;em&gt;Digital Ocean&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;conceptual-articles&#x2F;s-o-l-i-d-the-first-five-principles-of-object-oriented-design&quot;&gt;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;conceptual-articles&#x2F;s-o-l-i-d-the-first-five-principles-of-object-oriented-design&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Martin, Robert C. (n.d.). The Principles of OOD. &lt;em&gt;butUncleBob&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;http:&#x2F;&#x2F;butunclebob.com&#x2F;ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;http:&#x2F;&#x2F;butunclebob.com&#x2F;ArticleS.UncleBob.PrinciplesOfOod&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Bodin, Boris. (2023, September 9). Understanding SOLID Principles. &lt;em&gt;Scub-Lab&lt;&#x2F;em&gt;.&amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;lab.scub.net&#x2F;understanding-solid-principles-9a0181e68b88&quot;&gt;https:&#x2F;&#x2F;lab.scub.net&#x2F;understanding-solid-principles-9a0181e68b88&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Thelma, Ugonna. (2020, May 18). The S.O.L.I.D Principles in Pictures. &lt;em&gt;Ugonna Thelma&lt;&#x2F;em&gt;.&amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Object-oriented programming (OOP): an overview</title>
+        <published>2023-07-30T00:00:00+00:00</published>
+        <updated>2023-10-12T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/object-oriented-programming/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/object-oriented-programming/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is part of a series about tech interview.
+Go to &lt;a href=&quot;..&#x2F;tech-interview&quot;&gt;Tech interview&lt;&#x2F;a&gt; to read more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;⚠️ Since you are here I imagine that have a previous knowledge about programming, and programming language.
+If you don&#x27;t know anything about this, maybe this article is not for you yet.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;object-oriented-programming-oop-an-overview&quot;&gt;Object-oriented programming (OOP): an overview&lt;&#x2F;h1&gt;
+&lt;p&gt;Object-oriented Programming (OOP) is a programming paradigm that relies on concept of classes and objects (Nyakundi, 2022).
+Those concepts and the paradigms of OOP will be more explained in details.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;class-vs-object&quot;&gt;Class vs Object&lt;&#x2F;h2&gt;
+&lt;p&gt;When we model a problem in terms of objects in OOP, we create abstract definitions representing the types of objects we want to have in our system (Mozilla, n.d.).
+Those abstract definitions is what we call a &lt;strong&gt;class&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s imagine that we will create a trading card game (TCG).
+To make that we need some rules, and those rules are shared between the game.
+One of those rules are the &lt;strong&gt;cards&lt;&#x2F;strong&gt; entity, like the example below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;attack;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Check if this card is destroyed by the attacker.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; attacker card
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public boolean isDestroyedBy(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        return card.getAttack() &amp;gt; this.defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, I know that the &lt;strong&gt;Card&lt;&#x2F;strong&gt; have those variables and methods.
+Know I need to instantiate with data from real world.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;var knightOfKeyboard = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Knight of Keyboard&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;This programmer is a gentleman that always carry her own mechanical keyboard&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;850&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;900&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;var pmOfChaos = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Project Manager of Chaos&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Where this Project Manager go the place becomes a mess&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1200&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1000&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(knightOfKeyboard.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;isDestroyedBy&lt;&#x2F;span&gt;&lt;span&gt;(pmOfChaos)) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;println&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your card was destroyed&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;println&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your defense is better&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Those variables with the card is what we call an &lt;strong&gt;object&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;&#x2F;strong&gt;: Class is a template, containing variables and methods. Object is the instantiated class.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;paradigms-of-oop&quot;&gt;Paradigms of OOP&lt;&#x2F;h2&gt;
+&lt;p&gt;Now that you read about the difference between class and objects, it&#x27;s also important to know some paradigms of OOP.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;inheritance&quot;&gt;Inheritance&lt;&#x2F;h3&gt;
+&lt;p&gt;Our TCG is going on fire, but the players are talking that we have only character card.
+They are asking for another type. We will have know two types of cards: character card and app card.
+They share some variables and methods, but not all.&lt;&#x2F;p&gt;
+&lt;p&gt;To make simple and don&#x27;t repeat code, we will use one of the OOP paradigms, the inheritance.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;CharCard &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;attack;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Check if this card is destroyed by the attacker.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; attacker card
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public boolean isDestroyedBy(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        return card.getAttack() &amp;gt; this.defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;class AppCard extends Card {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    private final int modifier;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    &#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    &#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Apply modifier at some character card.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; card thaw will be modified
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public void modify(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        &#x2F;&#x2F; TODO implement
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;With the &lt;code&gt;AppCard&lt;&#x2F;code&gt; we can modify some information at the &lt;code&gt;CharCard&lt;&#x2F;code&gt;.
+Both of them is a &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We can say that &lt;code&gt;Card&lt;&#x2F;code&gt; is a &lt;strong&gt;superclass&lt;&#x2F;strong&gt; or &lt;strong&gt;parent class&lt;&#x2F;strong&gt; of both &lt;code&gt;CharCard&lt;&#x2F;code&gt;
+and &lt;code&gt;AppCard&lt;&#x2F;code&gt;. Also we can say that &lt;code&gt;CharCard&lt;&#x2F;code&gt; and &lt;code&gt;AppCard&lt;&#x2F;code&gt; are &lt;strong&gt;subclasses&lt;&#x2F;strong&gt; or
+&lt;strong&gt;child classes&lt;&#x2F;strong&gt; of &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We can &lt;em&gt;shuffle&lt;&#x2F;em&gt; both types at our deck, because both are subclasses of &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;encapsulation&quot;&gt;Encapsulation&lt;&#x2F;h3&gt;
+&lt;p&gt;This concept we are already using since the first example, let&#x27;s see again:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;See, we let only the responsible for the data to manipulate that. Only &lt;code&gt;Card&lt;&#x2F;code&gt;
+have access to the data &lt;code&gt;name&lt;&#x2F;code&gt;. This is what this concept is about.&lt;&#x2F;p&gt;
+&lt;p&gt;Encapsulation refers to the bundling of data and methods that operate on that
+data within a single unit (Geeks for Geeks, n.d.). We are hiding the
+implementations details, so the outside can&#x27;t see how it works, but can interact
+with the data by methods.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;abstraction&quot;&gt;Abstraction&lt;&#x2F;h3&gt;
+&lt;p&gt;The abstraction concept refers to the process of hiding the internal details,
+just describing things in simple terms.&lt;&#x2F;p&gt;
+&lt;p&gt;We can take the &lt;code&gt;List&lt;&#x2F;code&gt; for example, we have some methods like &lt;code&gt;add&lt;&#x2F;code&gt;, but we
+don&#x27;t know how it is implemented. We jus now that if we call this method sending
+some data as parameter, this data will be present at the list at the end.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;polymorphism&quot;&gt;Polymorphism&lt;&#x2F;h3&gt;
+&lt;p&gt;Polymorphism is the concept where an object behaves differently in different situations.&lt;&#x2F;p&gt;
+&lt;p&gt;There are two ways to achieve that, by &lt;em&gt;overriding&lt;&#x2F;em&gt;, or &lt;em&gt;overloading&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;difference-between-override-and-overload&quot;&gt;Difference between Override, and Overload&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;strong&gt;Override&lt;&#x2F;strong&gt; means that you will write a new behavior. Occurs on &lt;em&gt;run-time&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To understand, let&#x27;s go back to our card game, let&#x27;s make a small change to the
+&lt;code&gt;Card&lt;&#x2F;code&gt; class, adding a &lt;code&gt;toString&lt;&#x2F;code&gt; method&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;toString&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt; name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yeap, nothing to drastic, but for the &lt;code&gt;CharCard&lt;&#x2F;code&gt; this is too shallow, we need more
+information. To make this, we will &lt;strong&gt;Override&lt;&#x2F;strong&gt; the &lt;code&gt;toString&lt;&#x2F;code&gt; method.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;CharCard &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;toString&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;format&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;%s: %d&#x2F;%d&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;, name, attack, defense);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Every call to &lt;code&gt;toString&lt;&#x2F;code&gt; from &lt;code&gt;CharCard&lt;&#x2F;code&gt; will have this new information, but
+the behavior of &lt;code&gt;Card&lt;&#x2F;code&gt;, or &lt;code&gt;AppCard&lt;&#x2F;code&gt; will be the same, since we didn&#x27;t changed
+there.&lt;&#x2F;p&gt;
+&lt;p&gt;But the &lt;strong&gt;overload&lt;&#x2F;strong&gt; is different, we can add new methods with the same name, but
+different parameters.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, we are able to create two different constructors and still valid.
+We can choose which one we want at different places.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Deck &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;List&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt; cards;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;Deck&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        cards &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;ArrayList&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;Deck&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;List&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cards&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;.cards &lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt; cards;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; getter
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also, the &lt;strong&gt;overload&lt;&#x2F;strong&gt; happens at &lt;em&gt;compile-time&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Override&lt;&#x2F;em&gt;: Keep method signature, but change behavior&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Overload&lt;&#x2F;em&gt;: Two or more methods with same name, but different parameters&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Nyakundi, Hillay. (2022, September 6). OOP Meaning - What is Object-Oriented Programming?. &lt;em&gt;freeCodeCamp&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;what-is-object-oriented-programming&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;what-is-object-oriented-programming&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Mozilla. (n.d.). Object-oriented programming. &lt;em&gt;MDN Web Docs&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Learn&#x2F;JavaScript&#x2F;Objects&#x2F;Object-oriented_programming&#x2F;&quot;&gt;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Learn&#x2F;JavaScript&#x2F;Objects&#x2F;Object-oriented_programming&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Geeks for Geeks. (n.d.). Encapsulation in Java. &lt;em&gt;Geeks for Geeks&lt;&#x2F;em&gt; . &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;encapsulation-in-java&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;encapsulation-in-java&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tech Interview</title>
+        <published>2023-07-30T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/tech-interview/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/tech-interview/</id>
+        <content type="html">&lt;p&gt;Interviews is also part of being a programmer (or almost anything), here you will see a compiled of articles to help you at this path.&lt;&#x2F;p&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;WARNING&lt;&#x2F;strong&gt; This article is &lt;em&gt;UNDER CONSTRUCTION&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;programming&quot;&gt;Programming&lt;&#x2F;h1&gt;
+&lt;p&gt;This is not only algorithms and data structures topics, must also cover the basics of programming, with topics such as:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;..&#x2F;object-oriented-programming&quot;&gt;Object-oriented programing (OOP)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Design Patterns&lt;&#x2F;li&gt;
+&lt;li&gt;Clean code&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;..&#x2F;solid&quot;&gt;SOLID&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;algorithms-and-data-structure&quot;&gt;Algorithms and Data structure&lt;&#x2F;h2&gt;
+&lt;h1 id=&quot;system-design&quot;&gt;System Design&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Client-Server Model&lt;&#x2F;li&gt;
+&lt;li&gt;Network Protocols&lt;&#x2F;li&gt;
+&lt;li&gt;Storage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;version&quot;&gt;Version&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;(&lt;em&gt;2023&#x2F;07&#x2F;30&lt;&#x2F;em&gt;) 🎉 Starting this project, with a few topics that I will write.&lt;&#x2F;li&gt;
+&lt;li&gt;(&lt;em&gt;2023&#x2F;10&#x2F;10&lt;&#x2F;em&gt;) 🪨 Added SOLID article link.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tool Tips #1</title>
+        <published>2022-08-14T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/tool-tips-1/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/tool-tips-1/</id>
+        <content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;tooltip&lt;&#x2F;strong&gt;, ... is a common graphical user interface (GUI) element in which, when hovering over a screen element or component, a text box displays information about that element.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tooltip&quot;&gt;Wikipedia&lt;&#x2F;a&gt;, read on 2022-08-14&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I just tried to make some fun about the name, but to be more precise the title should be something more like &amp;quot;&lt;strong&gt;Tools that might help you too&lt;&#x2F;strong&gt;&amp;quot;. It is an article where I&#x27;ll show some useful software to do something. Yeah, pretty generic, right?&lt;&#x2F;p&gt;
+&lt;p&gt;In this article, I&#x27;ll show two apps that I use. The first one is about formatting a PC. It&#x27;s something trivial that we usually do over time, when we update to a new version of the OS, or  maybe when we want to try a different Linux distro. &lt;&#x2F;p&gt;
+&lt;p&gt;Last but not least, I&#x27;ll show a package manager for Windows.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;bootable-usb-drive-with-simple-steps-to-update&quot;&gt;Bootable USB drive with simple steps to update&lt;&#x2F;h1&gt;
+&lt;p&gt;I have already formated a lot of USB sticks to put another Linux distro or version of Windows in it. It takes time and it&#x27;s boring to do it every time: you install some software to help you create a bootable USB stick, or follow the commands with the terminal. To solve this, I&#x27;ve discovered &lt;a href=&quot;https:&#x2F;&#x2F;www.ventoy.net&#x2F;en&#x2F;index.html&quot;&gt;Ventoy&lt;&#x2F;a&gt; and it&#x27;s a lifesaver.&lt;&#x2F;p&gt;
+&lt;p&gt;After installing it in one USB drive, I just need to add the ISO to the right partition, and &lt;em&gt;voilà&lt;&#x2F;em&gt;, it&#x27;s ready!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-example.png#center&quot; alt=&quot;Windows Explorer at partition E: with three different images&quot; title=&quot;My Ventoy partition&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Example of the selection of ISO when booting through Ventoy:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-select-iso.png#center&quot; alt=&quot;Ventoy ISO selection screen with a list of different ISO to boot the PC from&quot; title=&quot;Ventoy screen&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;install-and-update-all-your-programs-at-once&quot;&gt;Install and update all your programs at once&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-brand.png#center&quot; alt=&quot;A small blue rock before the word Ninite in blue&quot; title=&quot;Ninite brand&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This software, called &lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;Ninite&lt;&#x2F;a&gt;, is a masterpiece made for Windows OS. It will help you install a lot of software with a single click. You just have to select the programs you want to install and Ninite will create a very small installer file for you. Plus, it will automatically reject all toolbars when installing the software.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-options.png#center&quot; alt=&quot;List of apps you can choose&quot; title=&quot;Ninite list of apps&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Run the Ninite installer and it&#x27;ll install all the programs you selected. Simple like that.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Git Submodules, an Overview</title>
+        <published>2022-08-08T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/git-submodules-an-overview/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/git-submodules-an-overview/</id>
+        <content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;p&gt;My first contact with the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; was a happy accident when looking at how to create my blog. Reading the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;&#x27;s documentation. It was recommended to use when adding a new theme to the project.&lt;&#x2F;p&gt;
+&lt;p&gt;With the flow to update, fix, and improve my blog, I had some issues understanding how the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; works. So, I&#x27;ve decided to create this article with some information. Enjoy.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-a-submodule&quot;&gt;What is a submodule?&lt;&#x2F;h1&gt;
+&lt;p&gt;The submodule allows you to add another git project inside your project. But why? Have you ever tried to get some project to your project? Probably the approach will be: download the repository (&lt;em&gt;zip file&lt;&#x2F;em&gt;) and unzip your project. If you need to update, you&#x27;ll do it everything again. Seems like a lot of work, and the submodule will remove for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This submodule will not be pushed with your commits. And when downloading the project will also download the submodule. The update will be one git command.&lt;&#x2F;p&gt;
+&lt;p&gt;But it&#x27;s not just that. You will be able to keep your custom codes in the library, making it easy to merge when a new version comes out.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;adding-a-submodule&quot;&gt;Adding a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;The command to add a submodule is a simple line:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule &amp;lt;url&amp;gt; &amp;lt;name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, you need more information before continuing. The &lt;strong&gt;URL&lt;&#x2F;strong&gt; is a git endpoint to download the project. And the &lt;strong&gt;name&lt;&#x2F;strong&gt; is how you want to have this submodule called on your project.&lt;&#x2F;p&gt;
+&lt;p&gt;Example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule https:&#x2F;&#x2F;github.com&#x2F;gscavalcante&#x2F;apollo.git themes&#x2F;apollo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This execution will create a folder &lt;code&gt;themes&#x2F;apollo&lt;&#x2F;code&gt; with the content of this repository in the last commit at the root of your project. Since my example have a name separated by a slash (&lt;em&gt;&#x2F;&lt;&#x2F;em&gt;), it will create a folder with the submodule inside.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; README.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; content
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;│&lt;&#x2F;span&gt;&lt;span&gt;   └── about.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; sass
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; static
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; templates
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; themes
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; apollo
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt; directories, 2 files
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now you can use everything from this project on your own.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;h2&gt;
+&lt;p&gt;Another way to add the submodule is with a branch, so it&#x27;ll not stay at a specific &lt;em&gt;SHA1&lt;&#x2F;em&gt; when updating. To accomplish this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -b &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;branch&amp;gt; &amp;lt;url&amp;gt; &amp;lt;name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But if you already have the submodule added, you can change the &lt;code&gt;.gitmodules&lt;&#x2F;code&gt; file, for example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;.gitmodules&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-.gitmodules &quot;&gt;&lt;code class=&quot;language-.gitmodules&quot; data-lang=&quot;.gitmodules&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;[submodule &amp;quot;&amp;lt;name&amp;gt;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;path &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;path&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;url&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;branch &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;branch&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Add the option &lt;strong&gt;branch&lt;&#x2F;strong&gt; with the one you want to get this submodule.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;update-a-submodule&quot;&gt;Update a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;Update from a remote repository is easy when you track with a branch. For this, run the command below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule update&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --remote
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If your submodule is not following from a branch, then go back and read &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;git-submodules-an-overview&#x2F;#adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-delete-a-submodule&quot;&gt;How to Delete a Submodule&lt;&#x2F;h1&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; rm &amp;lt;submodule-name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But the old directory will stay at &lt;code&gt;.git&#x2F;modules&#x2F;&amp;lt;path-to_submodule&amp;gt;&lt;&#x2F;code&gt;. Delete this folder, and you can download another submodule with the same name without a problem.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -rf&lt;&#x2F;span&gt;&lt;span&gt; .git&#x2F;modules&#x2F;&amp;lt;path-to_submodule&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+    </entry>
+</feed>

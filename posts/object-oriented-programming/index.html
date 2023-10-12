@@ -1,0 +1,112 @@
+<!doctype html><html class="dark light"><head><meta charset=UTF-8><meta content="IE=edge" http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1.0" name=viewport><title>
+         Object-oriented programming (OOP): an overview
+        
+    </title><meta content="Object-oriented programming (OOP): an overview" property=og:title><link href=/icon/favicon.png rel=icon type=image/png><link href=https://gcavalcante.com/fonts.css rel=stylesheet><script async data-goatcounter=https://gscavalcante.goatcounter.com/count src=https://gcavalcante.com/js/count.js></script><noscript><img src="https://gscavalcante.goatcounter.com//count?p=/posts/object-oriented-programming/&t=Object-oriented programming (OOP): an overview"></noscript><link title="Gabriel Cavalcante" href=https://gcavalcante.com/atom.xml rel=alternate type=application/atom+xml><link href=https://gcavalcante.com/theme/light.css rel=stylesheet><link href=https://gcavalcante.com/theme/dark.css id=darkModeStyle rel=stylesheet><link href=https://gcavalcante.com/main.css media=screen rel=stylesheet><link href=https://gcavalcante.com/css/image.css rel=stylesheet><link href=https://gcavalcante.com/css/tags.css rel=stylesheet><body><div class=content><header><div class=main><a href=https://gcavalcante.com>Gabriel Cavalcante</a><div class=socials><a class=social href=https://linkedin.com/in/cavalcante rel=me> <img alt=linkedin src=/social_icons/linkedin.svg> </a><a class=social href=https://github.com/gscavalcante rel=me> <img alt=github src=/social_icons/github.svg> </a><a class=social href=https://gcavalcante.com/atom.xml rel=me> <img alt=feed src=/social_icons/rss.svg> </a></div></div><nav><a href=/posts style=margin-left:.7em>/posts</a><a href=/projects style=margin-left:.7em>/projects</a><a href=/about style=margin-left:.7em>/about</a> | <a href=javascript:void(0) id=dark-mode-toggle onclick=toggleTheme()> <img id=sun-icon src=/feather/sun.svg style=filter:invert(1)> <img id=moon-icon src=/feather/moon.svg> </a><script src=https://gcavalcante.com/js/themetoggle.js></script></nav></header><main><article><div class=title><div class=page-header>Object-oriented programming (OOP): an overview<span class=primary-color style=font-size:1.6em>.</span></div><div class=meta>Posted on <time>2023-07-30</time></div></div><h1>Table of Contents</h1><ul><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#object-oriented-programming-oop-an-overview>Object-oriented programming (OOP): an overview</a> <ul><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#class-vs-object>Class vs Object</a><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#paradigms-of-oop>Paradigms of OOP</a></li><ul><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#inheritance>Inheritance</a><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#encapsulation>Encapsulation</a><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#abstraction>Abstraction</a><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#polymorphism>Polymorphism</a></ul></ul><li><a href=https://gcavalcante.com/posts/object-oriented-programming/#references>References</a></ul><section class=body><blockquote><p>This article is part of a series about tech interview. Go to <a href=../tech-interview>Tech interview</a> to read more.</blockquote><p>⚠️ Since you are here I imagine that have a previous knowledge about programming, and programming language. If you don't know anything about this, maybe this article is not for you yet.<h1 id=object-oriented-programming-oop-an-overview>Object-oriented programming (OOP): an overview</h1><p>Object-oriented Programming (OOP) is a programming paradigm that relies on concept of classes and objects (Nyakundi, 2022). Those concepts and the paradigms of OOP will be more explained in details.<h2 id=class-vs-object>Class vs Object</h2><p>When we model a problem in terms of objects in OOP, we create abstract definitions representing the types of objects we want to have in our system (Mozilla, n.d.). Those abstract definitions is what we call a <strong>class</strong>.<p>Let's imagine that we will create a trading card game (TCG). To make that we need some rules, and those rules are shared between the game. One of those rules are the <strong>cards</strong> entity, like the example below:<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>public class </span><span style=color:#ebcb8b>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>name;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>description;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final int </span><span style=color:#eff1f5>attack;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final int </span><span style=color:#eff1f5>defense;
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/*
+</span><span style=color:#65737e>        constructor and getters
+</span><span style=color:#65737e>    */
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/**
+</span><span style=color:#65737e>     * Check if this card is destroyed by the attacker.
+</span><span style=color:#65737e>     * 
+</span><span style=color:#65737e>     * </span><span style=color:#b48ead>@param </span><span style=color:#bf616a>Card</span><span style=color:#65737e> attacker card
+</span><span style=color:#65737e>     */
+</span><span style=color:#65737e>    public boolean isDestroyedBy(@NotNull final Card card) {
+</span><span style=color:#65737e>        return card.getAttack() > this.defense;
+</span><span style=color:#65737e>    }
+</span><span style=color:#65737e>}
+</span></code></pre><p>Ok, I know that the <strong>Card</strong> have those variables and methods. Know I need to instantiate with data from real world.<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span>var knightOfKeyboard = </span><span style=color:#b48ead>new </span><span style=color:#ebcb8b>Card</span><span>("</span><span style=color:#a3be8c>Knight of Keyboard</span><span>", "</span><span style=color:#a3be8c>This programmer is a gentleman that always carry her own mechanical keyboard</span><span>", </span><span style=color:#d08770>850</span><span>, </span><span style=color:#d08770>900</span><span>);
+</span><span>var pmOfChaos = </span><span style=color:#b48ead>new </span><span style=color:#ebcb8b>Card</span><span>("</span><span style=color:#a3be8c>Project Manager of Chaos</span><span>", "</span><span style=color:#a3be8c>Where this Project Manager go the place becomes a mess</span><span>", </span><span style=color:#d08770>1200</span><span>, </span><span style=color:#d08770>1000</span><span>);
+</span><span>
+</span><span style=color:#b48ead>if </span><span>(knightOfKeyboard.</span><span style=color:#bf616a>isDestroyedBy</span><span>(pmOfChaos)) {
+</span><span>    </span><span style=color:#ebcb8b>System</span><span>.out.</span><span style=color:#bf616a>println</span><span>("</span><span style=color:#a3be8c>Your card was destroyed</span><span>");
+</span><span>} </span><span style=color:#b48ead>else </span><span>{
+</span><span>    </span><span style=color:#ebcb8b>System</span><span>.out.</span><span style=color:#bf616a>println</span><span>("</span><span style=color:#a3be8c>Your defense is better</span><span>");
+</span><span>}
+</span></code></pre><p>Those variables with the card is what we call an <strong>object</strong>.<p><strong>TL;DR</strong>: Class is a template, containing variables and methods. Object is the instantiated class.<h2 id=paradigms-of-oop>Paradigms of OOP</h2><p>Now that you read about the difference between class and objects, it's also important to know some paradigms of OOP.<h3 id=inheritance>Inheritance</h3><p>Our TCG is going on fire, but the players are talking that we have only character card. They are asking for another type. We will have know two types of cards: character card and app card. They share some variables and methods, but not all.<p>To make simple and don't repeat code, we will use one of the OOP paradigms, the inheritance.<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>abstract class </span><span style=color:#ebcb8b>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>name;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>description;
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/*
+</span><span style=color:#65737e>        constructor and getters
+</span><span style=color:#65737e>    */
+</span><span style=color:#eff1f5>}
+</span><span>
+</span><span style=color:#b48ead>class </span><span style=color:#ebcb8b>CharCard </span><span style=color:#b48ead>extends </span><span style=color:#a3be8c>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final int </span><span style=color:#eff1f5>attack;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final int </span><span style=color:#eff1f5>defense;
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/*
+</span><span style=color:#65737e>        constructor and getters
+</span><span style=color:#65737e>    */
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/**
+</span><span style=color:#65737e>     * Check if this card is destroyed by the attacker.
+</span><span style=color:#65737e>     * 
+</span><span style=color:#65737e>     * </span><span style=color:#b48ead>@param </span><span style=color:#bf616a>Card</span><span style=color:#65737e> attacker card
+</span><span style=color:#65737e>     */
+</span><span style=color:#65737e>    public boolean isDestroyedBy(@NotNull final Card card) {
+</span><span style=color:#65737e>        return card.getAttack() > this.defense;
+</span><span style=color:#65737e>    }
+</span><span style=color:#65737e>}
+</span><span style=color:#65737e>
+</span><span style=color:#65737e>class AppCard extends Card {
+</span><span style=color:#65737e>    private final int modifier;
+</span><span style=color:#65737e>
+</span><span style=color:#65737e>    /*
+</span><span style=color:#65737e>        constructor and getters
+</span><span style=color:#65737e>    */
+</span><span style=color:#65737e>
+</span><span style=color:#65737e>    /**
+</span><span style=color:#65737e>     * Apply modifier at some character card.
+</span><span style=color:#65737e>     * 
+</span><span style=color:#65737e>     * </span><span style=color:#b48ead>@param </span><span style=color:#bf616a>Card</span><span style=color:#65737e> card thaw will be modified
+</span><span style=color:#65737e>     */
+</span><span style=color:#65737e>    public void modify(@NotNull final Card card) {
+</span><span style=color:#65737e>        // TODO implement
+</span><span style=color:#65737e>        
+</span><span style=color:#65737e>    }
+</span><span style=color:#65737e>}
+</span></code></pre><p>With the <code>AppCard</code> we can modify some information at the <code>CharCard</code>. Both of them is a <code>Card</code>.<p>We can say that <code>Card</code> is a <strong>superclass</strong> or <strong>parent class</strong> of both <code>CharCard</code> and <code>AppCard</code>. Also we can say that <code>CharCard</code> and <code>AppCard</code> are <strong>subclasses</strong> or <strong>child classes</strong> of <code>Card</code>.<p>We can <em>shuffle</em> both types at our deck, because both are subclasses of <code>Card</code>.<h3 id=encapsulation>Encapsulation</h3><p>This concept we are already using since the first example, let's see again:<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>abstract class </span><span style=color:#ebcb8b>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>name;
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>String </span><span style=color:#eff1f5>description;
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>/*
+</span><span style=color:#65737e>        constructor and getters
+</span><span style=color:#65737e>    */
+</span><span style=color:#eff1f5>}
+</span></code></pre><p>See, we let only the responsible for the data to manipulate that. Only <code>Card</code> have access to the data <code>name</code>. This is what this concept is about.<p>Encapsulation refers to the bundling of data and methods that operate on that data within a single unit (Geeks for Geeks, n.d.). We are hiding the implementations details, so the outside can't see how it works, but can interact with the data by methods.<h3 id=abstraction>Abstraction</h3><p>The abstraction concept refers to the process of hiding the internal details, just describing things in simple terms.<p>We can take the <code>List</code> for example, we have some methods like <code>add</code>, but we don't know how it is implemented. We jus now that if we call this method sending some data as parameter, this data will be present at the list at the end.<h3 id=polymorphism>Polymorphism</h3><p>Polymorphism is the concept where an object behaves differently in different situations.<p>There are two ways to achieve that, by <em>overriding</em>, or <em>overloading</em>.<h4 id=difference-between-override-and-overload>Difference between Override, and Overload</h4><p><strong>Override</strong> means that you will write a new behavior. Occurs on <em>run-time</em>.<p>To understand, let's go back to our card game, let's make a small change to the <code>Card</code> class, adding a <code>toString</code> method<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>abstract class </span><span style=color:#ebcb8b>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>// ..
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>public </span><span style=color:#ebcb8b>String </span><span style=color:#8fa1b3>toString</span><span style=color:#eff1f5>() {
+</span><span style=color:#eff1f5>        </span><span style=color:#b48ead>return</span><span style=color:#eff1f5> name;
+</span><span style=color:#eff1f5>    }
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>}
+</span></code></pre><p>Yeap, nothing to drastic, but for the <code>CharCard</code> this is too shallow, we need more information. To make this, we will <strong>Override</strong> the <code>toString</code> method.<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>class </span><span style=color:#ebcb8b>CharCard </span><span style=color:#b48ead>extends </span><span style=color:#a3be8c>Card </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>// ..
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>public </span><span style=color:#ebcb8b>String </span><span style=color:#8fa1b3>toString</span><span style=color:#eff1f5>() {
+</span><span style=color:#eff1f5>        </span><span style=color:#b48ead>return </span><span style=color:#ebcb8b>String</span><span style=color:#eff1f5>.</span><span style=color:#bf616a>format</span><span style=color:#eff1f5>(</span><span>"</span><span style=color:#a3be8c>%s: %d/%d</span><span>"</span><span style=color:#eff1f5>, name, attack, defense);
+</span><span style=color:#eff1f5>    }
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>}
+</span></code></pre><p>Every call to <code>toString</code> from <code>CharCard</code> will have this new information, but the behavior of <code>Card</code>, or <code>AppCard</code> will be the same, since we didn't changed there.<p>But the <strong>overload</strong> is different, we can add new methods with the same name, but different parameters.<p>For example, we are able to create two different constructors and still valid. We can choose which one we want at different places.<pre class=language-java data-lang=java style=background:#2b303b;color:#c0c5ce><code class=language-java data-lang=java><span style=color:#b48ead>class </span><span style=color:#ebcb8b>Deck </span><span style=color:#eff1f5>{
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>private final </span><span style=color:#ebcb8b>List</span><span style=color:#eff1f5><</span><span style=color:#ebcb8b>Card</span><span style=color:#eff1f5>> cards;
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>public </span><span style=color:#8fa1b3>Deck</span><span style=color:#eff1f5>() {
+</span><span style=color:#eff1f5>        cards </span><span>= </span><span style=color:#b48ead>new </span><span style=color:#ebcb8b>ArrayList</span><span style=color:#eff1f5><</span><span style=color:#ebcb8b>Card</span><span style=color:#eff1f5>>;
+</span><span style=color:#eff1f5>    }
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#b48ead>public </span><span style=color:#8fa1b3>Deck</span><span style=color:#eff1f5>(</span><span style=color:#ebcb8b>List</span><span style=color:#eff1f5><</span><span style=color:#ebcb8b>Card</span><span style=color:#eff1f5>> </span><span style=color:#bf616a>cards</span><span style=color:#eff1f5>) {
+</span><span style=color:#eff1f5>        </span><span style=color:#bf616a>this</span><span style=color:#eff1f5>.cards </span><span>=</span><span style=color:#eff1f5> cards;
+</span><span style=color:#eff1f5>    }
+</span><span style=color:#eff1f5>
+</span><span style=color:#eff1f5>    </span><span style=color:#65737e>// getter
+</span><span style=color:#eff1f5>}
+</span></code></pre><p>Also, the <strong>overload</strong> happens at <em>compile-time</em>.<p><strong>TL;DR</strong>:<ul><li><em>Override</em>: Keep method signature, but change behavior<li><em>Overload</em>: Two or more methods with same name, but different parameters</ul><h1 id=references>References</h1><ul><li>Nyakundi, Hillay. (2022, September 6). OOP Meaning - What is Object-Oriented Programming?. <em>freeCodeCamp</em>. <<a href=https://www.freecodecamp.org/news/what-is-object-oriented-programming/>https://www.freecodecamp.org/news/what-is-object-oriented-programming/</a>/><li>Mozilla. (n.d.). Object-oriented programming. <em>MDN Web Docs</em>. <<a href=https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming/>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming/</a>/><li>Geeks for Geeks. (n.d.). Encapsulation in Java. <em>Geeks for Geeks</em> . <<a href=https://www.geeksforgeeks.org/encapsulation-in-java/>https://www.geeksforgeeks.org/encapsulation-in-java/</a>/></ul></section><div class=post-tags><nav class="nav tags"><ul class=tags><li><a href=https://gcavalcante.com/tags/interview/>interview</a><li><a href=https://gcavalcante.com/tags/tech/>tech</a><li><a href=https://gcavalcante.com/tags/programming/>programming</a></ul></nav></div></article></main></div>
