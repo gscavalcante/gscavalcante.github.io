@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Gabriel Cavalcante</title>
+    <link href="https://gcavalcante.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://gcavalcante.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-07-15T00:00:00+00:00</updated>
+    <id>https://gcavalcante.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>MongoDB Developer Day Belo Horizonte</title>
+        <published>2026-06-02T00:00:00+00:00</published>
+        <updated>2026-06-02T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/mongodb-dev-day-bh/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/mongodb-dev-day-bh/</id>
+        <content type="html">&lt;h1 id=&quot;leaves-mongodb-developer-day-belo-horizonte&quot;&gt;🍃 MongoDB Developer Day Belo Horizonte&lt;&#x2F;h1&gt;
+&lt;p&gt;Well, this article will be not so techinical, just some comments about the event I was invited to participate. As the title of the event already says, it&#x27;s an entire day working with MongoDB, will be a mix of AI with MongoDB.&lt;&#x2F;p&gt;
+&lt;p&gt;The good news is that was a hands-on experience. 🥳&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🤪 This &amp;quot;&lt;em&gt;article&lt;&#x2F;em&gt;&amp;quot; will not have a good structure, I think it&#x27;s better to call my notes. Some &lt;strong&gt;free notes&lt;&#x2F;strong&gt; that I was taking during the presentations.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;mag-right-vector-search-beginner-to-pro&quot;&gt;🔎 Vector Search: Beginner to Pro&lt;&#x2F;h2&gt;
+&lt;p&gt;What is vector search? It&#x27;s used to do a semantic search, this means that I will search by context. Meaning that will not only get data from the text itself.&lt;&#x2F;p&gt;
+&lt;p&gt;The difereces between searchs:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Lexical search&lt;&#x2F;th&gt;&lt;th&gt;Vector search&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Keyword search&lt;&#x2F;td&gt;&lt;td&gt;Semantic similarities&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;You want to corpus closely matches how users search&lt;&#x2F;td&gt;&lt;td&gt;&amp;quot;Vocabulary gap&amp;quot; between corpus and how users search&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;First pass at text-based relevancy&lt;&#x2F;td&gt;&lt;td&gt;Text, image, audio, video search&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Embeddings&lt;&#x2F;strong&gt;: numeric, mult-dimensional representation of a piece of information.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The data is embedded following a embedding model (machine learning model) to generate a vector of this information.&lt;&#x2F;p&gt;
+&lt;p&gt;We will use at this event the Voyage AI embedding tool. It&#x27;s a tool owned by MongoDB.&lt;&#x2F;p&gt;
+&lt;p&gt;You need to choose the calculation to make the search. Some of them are: &lt;strong&gt;euclidean distance&lt;&#x2F;strong&gt; between the vertices of the vector, &lt;strong&gt;dot product&lt;&#x2F;strong&gt; vector multiplication as a measure of alignment, or &lt;strong&gt;cosine similarity&lt;&#x2F;strong&gt;. The &lt;strong&gt;cosine similarity&lt;&#x2F;strong&gt; is the most used by &lt;strong&gt;vector search&lt;&#x2F;strong&gt;, because it&#x27;s measuring the angle between vectors.&lt;&#x2F;p&gt;
+&lt;p&gt;One way to improve performance is to make a &lt;strong&gt;pre-filtering&lt;&#x2F;strong&gt; technique. This way it will use a small dataset to do a vector search. There is another way, the &lt;strong&gt;post-filtering&lt;&#x2F;strong&gt;, but it&#x27;s not a good technique.&lt;&#x2F;p&gt;
+&lt;p&gt;It is also possible to shrink the size of the embedding data on &lt;strong&gt;MongoDB&lt;&#x2F;strong&gt;, you can choose the &lt;em&gt;quantization&lt;&#x2F;em&gt;. The &lt;strong&gt;scalar quantization&lt;&#x2F;strong&gt; will change from float32 to int8. &lt;strong&gt;Binary quantization&lt;&#x2F;strong&gt; will decrease even more, making possible to use a single bit.&lt;&#x2F;p&gt;
+&lt;p&gt;Links for vector search:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;embedding-models&quot;&gt;How to Choose the Best Embedding Model for Your LLM Application&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;hnsw-deepdive&quot;&gt;HSNW Deepdive&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;voyage-4&quot;&gt;Asymmetric retrieval using Voyage 4&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;quantization&quot;&gt;Quantization&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;minidisc-building-rag-applications-with-mongodb&quot;&gt;💽 Building RAG Applications with MongoDB&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Retrieval-augemented generation&lt;&#x2F;strong&gt; (RAG) is a technique to enhance the quality of pre-trained LLM generation using information retrieved from external sources. It&#x27;s a way to use AI but using a knowledge base.&lt;&#x2F;p&gt;
+&lt;p&gt;The current top tier is &lt;strong&gt;AI agents&lt;&#x2F;strong&gt;, it has the knowledge base, but also has access to tools. The agent can execute some actions, for exemple: call a &lt;code&gt;ls&lt;&#x2F;code&gt; on my &lt;em&gt;terminal&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Simples tasks are not required to have RAG, most of pre-trained models can handle those kinds of tasks. Making RAG being useful, when it&#x27;s most specific tasks where I need to understand better the data.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Chunking&lt;&#x2F;strong&gt;: process of breaking down large pieces of text into smaller segments or chunks.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Chunking strategies:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fixed tokens&lt;&#x2F;strong&gt;: it&#x27;s limited by a number;
+&lt;ul&gt;
+&lt;li&gt;also possible to use with overlap&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Recursive with overlap&lt;&#x2F;strong&gt;: because it considers also paragraphs, punctuations, etc;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Semantic chunk&lt;&#x2F;strong&gt;: get all string to make sure it make senses (is not the most used).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Contextualized embeddings create a relationship between the chunks. Making possible to the LLM to get all context.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;‼️ Always, always check if you are blocking anything that is not prepared to answer. Keep a guardrail so the anwser will not be of the track.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;To continue building a RAG application, it&#x27;s important to persist this context. You need to understand which level of persistence you will need.&lt;&#x2F;p&gt;
+&lt;p&gt;Links:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;chunking-strategies&quot;&gt;Chunking strategies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;context-3&quot;&gt;Contextualized chunkings&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-a-to-z-of-building-ai-agents&quot;&gt;The A to Z of Building AI Agents&lt;&#x2F;h2&gt;
+&lt;p&gt;The idea is to reconstruct the &lt;a href=&quot;https:&#x2F;&#x2F;docs.mongodb.com&quot;&gt;MongoDB chatbot&lt;&#x2F;a&gt;. It was some features: anwser questions based on the knowledge base and summarize the content.&lt;&#x2F;p&gt;
+&lt;p&gt;First thing first, what is an AI agent? An AI agent is a system that uses LLM to: &lt;strong&gt;reason&lt;&#x2F;strong&gt; through a problem, &lt;strong&gt;create a plan&lt;&#x2F;strong&gt; to solve the problem, &lt;strong&gt;execute and iterate&lt;&#x2F;strong&gt; on the plan with the help of a set of tools. The agent chooses which tool use, when call, and how to call.&lt;&#x2F;p&gt;
+&lt;p&gt;Components of an agent:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Perception&lt;&#x2F;strong&gt;: collect informations about the environment, as an input;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Plan and reason&lt;&#x2F;strong&gt;: how to solve a problem and elaborate a plan to solve it, the LLM, also knew as an agent brain;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plan without feedback (Chain-of-Thought)&lt;&#x2F;strong&gt;: LLM does not modify your execution plan;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Plan with feedback&lt;&#x2F;strong&gt;: the LLM will make some adjustments on the execution plan;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ReAct (Reason + Act)&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Reflection&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tools (actions)&lt;&#x2F;strong&gt;: external interfaces to act and solve a problem, examples: getting info on wikipedia, database vector search;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Memory&lt;&#x2F;strong&gt;: help the agent to understand and learn with the past.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Short term&lt;&#x2F;strong&gt;: specific chat;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Long term&lt;&#x2F;strong&gt;: about multiple chats.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.langchain.com&#x2F;langgraph&quot;&gt;LangGraph&lt;&#x2F;a&gt; was be the library used to orchestrate the actions between the agents. Graphs has only three components:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nodes&lt;&#x2F;strong&gt; (logic): two nodes, one of the agent and another for the tools&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Edges&lt;&#x2F;strong&gt;: define the workflow
+&lt;ul&gt;
+&lt;li&gt;Fixed:&lt;&#x2F;li&gt;
+&lt;li&gt;Conditional: like a decision tree;&lt;&#x2F;li&gt;
+&lt;li&gt;Non-conditional:&lt;&#x2F;li&gt;
+&lt;li&gt;Loops: return to a specific node using a custom logic for that.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;State&lt;&#x2F;strong&gt;: data structure shared between the nodes, to have relevant data to execute the task.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[START] -&amp;gt; [Agent Node] -&amp;gt; (conditional) -&amp;gt; [Tool Node] -&amp;gt; [Agent Node] -&amp;gt; ... -&amp;gt; [END]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Links:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;mdb.link&#x2F;agent-memory&quot;&gt;Agent memory talk&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;That&#x27;s all folks! Just to keep one more link here, you can check the &lt;a href=&quot;https:&#x2F;&#x2F;www.mongodb.com&#x2F;resources&#x2F;use-cases&#x2F;artificial-intelligence&#x2F;?utm_campaign=devrel&amp;amp;utm_source=workshop&amp;amp;utm_medium=cta&amp;amp;utm_content=genai_devday&amp;amp;utm_term=apoorva.joshi&quot;&gt;MongoDB AI Learning HUB&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Avatar Legends: Cadê meus repolhos? (Parte 1)</title>
+        <published>2026-06-02T00:00:00+00:00</published>
+        <updated>2026-07-15T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/stories/avatar-inter-rpg-01/" type="text/html"/>
+        <id>https://gcavalcante.com/stories/avatar-inter-rpg-01/</id>
+        <content type="html">&lt;h1 id=&quot;avatar-legends-cade-meus-repolhos-parte-1&quot;&gt;🥬 Avatar Legends: Cadê meus repolhos? (Parte 1)&lt;&#x2F;h1&gt;
+&lt;p&gt;A movimentação nas &lt;em&gt;Planícies da Grama Afiada&lt;&#x2F;em&gt; estava um pouco estranha. Um homem havia acabado de sair da vila, ele parecia muito cansado, seus vestes estavam todo sujo e rasgado. Ele teve uma breve conversa com a senhora &lt;em&gt;Qiang&lt;&#x2F;em&gt;, a maior autoridade local.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apresentação dos personagens, aguardando jogadores. (texto ainda em rascunho)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Qiang&lt;&#x2F;em&gt; pediu ajuda aos camaradas para levar o jovem mercador de repolhos &lt;em&gt;Zixin&lt;&#x2F;em&gt; para o &lt;em&gt;Monte Bao&lt;&#x2F;em&gt;. Onde os camaradas &lt;em&gt;Kaelik&lt;&#x2F;em&gt;, &lt;em&gt;Yuka&lt;&#x2F;em&gt;, &lt;em&gt;Morisokka&lt;&#x2F;em&gt; e &lt;em&gt;Zhu&lt;&#x2F;em&gt; saíram das &lt;em&gt;Planícies da Grama Afiada&lt;&#x2F;em&gt; com &lt;em&gt;Zixin&lt;&#x2F;em&gt; e sua carroça de repolhos. O caminho até as montanhas ocorreu sem grandes problemas, eles revezaram para empurrar a carroça, passando por algumas pequenas vilas, e pontes.&lt;&#x2F;p&gt;
+&lt;p&gt;Ao chegar na montanha os camaradas se depararam com uma estranha neblina. Não havia o que temer, &lt;em&gt;Zhu&lt;&#x2F;em&gt; era um dobrador de água experiente, sabia como remover a neblina. Claro, depois de se esforçar para remover a neblina do caminho ela se intensificou.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Kaelik&lt;&#x2F;em&gt; agiu de prontidão, segurou &lt;em&gt;Zixin&lt;&#x2F;em&gt; por sua gola, enquanto Yuka não chegou a se afastar pois estava levando a carroça de repolhos. &lt;em&gt;Morisokka&lt;&#x2F;em&gt; um grande estrategista conseguiu se manter unido aos camaradas. Entretando, &lt;em&gt;Zhu&lt;&#x2F;em&gt; não conseguiu se manter junto. Separando-se do grupo.&lt;&#x2F;p&gt;
+&lt;p&gt;Após 30 minutos de caminhada o grupo se deu falta de &lt;em&gt;Zhu&lt;&#x2F;em&gt;, sem ter muito o que fazer optaram por seguir rumo ao &lt;em&gt;Monte Bao&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Zhu seguiu caminho, sem saber que estava sozinho. No horizonte conseguiu enxergar algumas formas. Se sentindo confortável avançou se deparando com uma senhora chamada &lt;em&gt;Tia Hana&lt;&#x2F;em&gt;, e dois irmãos do reino da água, &lt;em&gt;Yan&lt;&#x2F;em&gt; e &lt;em&gt;Maly&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;Olá meu jovem, poderia oferecer ajuda a uma senhora?&amp;quot; sem nem olhar aos seus companheiros, Tia Hana perguntou.&lt;&#x2F;p&gt;
+&lt;p&gt;O grupo, seguiu e parou em uma encruzilhada, onde avistou um grupo do reino da terra. &lt;em&gt;Kaelik&lt;&#x2F;em&gt; tentou negociar com eles, para que pudessem passar sem grandes problemas. Com muita intensidade o grupo correu atrás dele. &lt;em&gt;Yuka&lt;&#x2F;em&gt; preparou uma bola de fogo e tentou intimidar, o que parecia ter funcionado até que &lt;em&gt;Kaelik&lt;&#x2F;em&gt; tenta ajudar.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;Vocês não possuem a capacidade de brigar com o Yuka.&amp;quot; Kaelik esbravejou.&lt;&#x2F;p&gt;
+&lt;p&gt;Todos se engajaram em uma troca. &lt;em&gt;Zhu&lt;&#x2F;em&gt; viu o grupo de longe, e se preparou para o combate. Os irmãos começaram a atacar &lt;em&gt;Zhu&lt;&#x2F;em&gt;. &lt;em&gt;Tia Hana&lt;&#x2F;em&gt; havia sumido.&lt;&#x2F;p&gt;
+&lt;p&gt;Após uma intensa batalha, &lt;em&gt;Yan&lt;&#x2F;em&gt; foge. E os camaradas conseguem desmaiar os inimigos. A batalha não terminou muito bem, &lt;em&gt;Zixin&lt;&#x2F;em&gt; havia sumido.&lt;&#x2F;p&gt;
+&lt;p&gt;O mistério ficou. Na carroça havia um pedaço rasgado de tecido, aparentemente da tribo da terra. O que aconteceu com &lt;em&gt;Zixin&lt;&#x2F;em&gt;? Onde estão &lt;em&gt;Tia Hana&lt;&#x2F;em&gt; e os irmãos? Qual a relação entre eles?&lt;&#x2F;p&gt;
+&lt;p&gt;Ao menos uma alegria ficou, havia repolhos.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Cookie</title>
+        <published>2025-07-31T00:00:00+00:00</published>
+        <updated>2025-07-31T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/recipes/cookie/" type="text/html"/>
+        <id>https://gcavalcante.com/recipes/cookie/</id>
+        <content type="html">&lt;h1 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;125 g of unsalted butter at room temperature;&lt;&#x2F;li&gt;
+&lt;li&gt;3&#x2F;4 cup os sugar;&lt;&#x2F;li&gt;
+&lt;li&gt;1&#x2F;2 cup of brown sugar;&lt;&#x2F;li&gt;
+&lt;li&gt;1 egg;&lt;&#x2F;li&gt;
+&lt;li&gt;1 e 3&#x2F;4 cup of flour;&lt;&#x2F;li&gt;
+&lt;li&gt;1 tea spoon of baking powder;&lt;&#x2F;li&gt;
+&lt;li&gt;300 g of chopped semisweet chocolate;&lt;&#x2F;li&gt;
+&lt;li&gt;1 tea spoon of vanilla essence.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 Tip: &lt;em&gt;to make &lt;strong&gt;chocolate cookie&lt;&#x2F;strong&gt; add 1&#x2F;4 cup of cocoa powder&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;directions&quot;&gt;Directions&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Combine the butter, brown sugar, sugar, vanilla extract (&lt;em&gt;and cocoa powder, if making chocolate-based cookies&lt;&#x2F;em&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;Gradually add the beaten egg and mix well.&lt;&#x2F;li&gt;
+&lt;li&gt;Gradually add the flour and mix well (you can do this by hand or with a stand mixer).&lt;&#x2F;li&gt;
+&lt;li&gt;Finally, add the baking powder and mix just until incorporated.&lt;&#x2F;li&gt;
+&lt;li&gt;Once the dough is well mixed, add the chopped chocolate.&lt;&#x2F;li&gt;
+&lt;li&gt;Form into small balls and bake in a preheated oven, on parchment paper, for approximately 15 to 20 minutes (250°C).&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Git multi keys</title>
+        <published>2025-07-27T00:00:00+00:00</published>
+        <updated>2025-07-27T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/git-multi-key/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/git-multi-key/</id>
+        <content type="html">&lt;p&gt;Another of fast paced configurations, this one is focused on have more
+ssh keys for different projects.
+I&#x27;m using my personal computer for work, well this implies different git access and configurations.&lt;&#x2F;p&gt;
+&lt;p&gt;We need to start creating the &lt;a href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;en&#x2F;authentication&#x2F;connecting-to-github-with-ssh&#x2F;generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;SSH keys&lt;&#x2F;a&gt; twice:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ssh-keygen -t&lt;&#x2F;span&gt;&lt;span&gt; ed25519&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -C &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;your_email@example.com&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;When I run the command above I usually save like: &lt;code&gt;id_ed25519_personal&lt;&#x2F;code&gt; and &lt;code&gt;id_ed25519_work&lt;&#x2F;code&gt;. Now you can add to the configuration.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;touch ~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;.ssh&#x2F;config
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And with your favorite editor put something like:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;Host github.com
+&lt;&#x2F;span&gt;&lt;span&gt;	Hostname github.com
+&lt;&#x2F;span&gt;&lt;span&gt;	User git
+&lt;&#x2F;span&gt;&lt;span&gt;	IdentityFile ~&#x2F;.ssh&#x2F;id_ed25519_personal
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Host bitbucket.org
+&lt;&#x2F;span&gt;&lt;span&gt;	Hostname bitbucket.org
+&lt;&#x2F;span&gt;&lt;span&gt;	User git
+&lt;&#x2F;span&gt;&lt;span&gt;	IdentityFile ~&#x2F;.ssh&#x2F;id_ed25519_work
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Since my company do not uses github, I just put the general hostname for that.&lt;&#x2F;p&gt;
+&lt;p&gt;Now it&#x27;s a nice trick. Usually I&#x27;ve a global config for my email, but at the
+companies git it should use the corporate one. So, edit your &lt;code&gt;~&#x2F;.gitconfig&lt;&#x2F;code&gt; file,
+and add:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[includeIf &amp;quot;gitdir:~&#x2F;Projects&#x2F;work&#x2F;**&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;	path=&amp;quot;~&#x2F;.work.gitconfig&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now, create the &lt;code&gt;~&#x2F;.work.gitconfig&lt;&#x2F;code&gt; and put:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;[user]
+&lt;&#x2F;span&gt;&lt;span&gt;	email = email@work.com
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now everything from your work should be on the work folder, and everything there
+it will also have the &lt;code&gt;.work.gitconfig&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Adding Swagger on Spring Rest</title>
+        <published>2025-07-08T00:00:00+00:00</published>
+        <updated>2025-07-08T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/swagger-on-spring-rest/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/swagger-on-spring-rest/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;ℹ️ This article is a simple step-by-step.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Start adding the dependency on the &lt;code&gt;pom.xml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;xml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-xml &quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dependency&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;groupId&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;org.springdoc&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;groupId&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;artifactId&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;springdoc-openapi-starter-webmvc-ui&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;artifactId&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;version&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;${springdoc.version}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;version&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;dependency&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;After that you should create the configuration.
+On my example below I&#x27;m using everything as default, and scanning the package
+that I need.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Configuration
+&lt;&#x2F;span&gt;&lt;span&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Import&lt;&#x2F;span&gt;&lt;span&gt;({
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.webmvc.ui.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SwaggerConfig&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.core.configuration.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SpringDocConfiguration&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.webmvc.core.configuration.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SpringDocWebMvcConfiguration&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.core.properties.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SpringDocConfigProperties&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.core.properties.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SwaggerUiConfigParameters&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.core.properties.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SwaggerUiConfigProperties&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        org.springdoc.core.properties.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;SwaggerUiOAuthProperties&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;class
+&lt;&#x2F;span&gt;&lt;span&gt;})
+&lt;&#x2F;span&gt;&lt;span&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ComponentScan&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;basePackages &lt;&#x2F;span&gt;&lt;span&gt;= {&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;org.springdoc&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;})
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;OpenApiConfig &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${build.version}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;buildVersion;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Bean
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;OpenAPI &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;customOpenAPI&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;OpenAPI&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;info&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Info&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;()
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Lorem Ipsum API&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;version&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(buildVersion)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;description&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;));
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It&#x27;s important to remember to add the version on the application properties.
+As the example (&lt;code&gt;application.yml&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;build.version&lt;&#x2F;span&gt;&lt;span&gt;: @&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;project.version@
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This way the version will be read from the &lt;code&gt;pom.xml&lt;&#x2F;code&gt;, meaning that you only need
+to change this at a single place.&lt;&#x2F;p&gt;
+&lt;p&gt;Now you can connect: &lt;code&gt;localhost:${PORT}&#x2F;${CONTEXT-PATH}&#x2F;swagger-ui&#x2F;index.html&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Git bash integration</title>
+        <published>2025-04-03T00:00:00+00:00</published>
+        <updated>2025-04-03T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/git-ps1/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/git-ps1/</id>
+        <content type="html">&lt;p&gt;To make that works, you just need to have access to the terminal,
+and also to some text editor, like vim.&lt;&#x2F;p&gt;
+&lt;p&gt;We should add a funtion to check if you are at a git project,
+and return the branch.&lt;&#x2F;p&gt;
+&lt;p&gt;Git already provides a helper function for that &lt;code&gt;__git_ps1&lt;&#x2F;code&gt;.
+For me it&#x27;s not perfect because I don&#x27;t want to have a space between my
+pc name and the &lt;code&gt;$&lt;&#x2F;code&gt; character.&lt;&#x2F;p&gt;
+&lt;p&gt;To fix that, I created my helper at &lt;code&gt;.bashrc&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# enable git branch name
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;parse_git_branch&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;[[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;-n &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;__git_ps1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;]]&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;echo &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;__git_ps1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This helper is pretty simple, it validates if I have any output with
+the git helper, if positive returns my branch.&lt;&#x2F;p&gt;
+&lt;p&gt;Then you can just update your ps1, or ps1 function like below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;[ &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;color_prompt&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; = yes &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PS1&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(parse_git_branch)\[\033[00m\]\$ &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;else
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PS1&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yeah, I know this is not a big tutorial of how to make that,
+it&#x27;s more a way that I can use later when I format my pc. 🤪&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Binary Search in Java</title>
+        <published>2024-05-07T00:00:00+00:00</published>
+        <updated>2024-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/algorithms/binary-search/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/algorithms/binary-search/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is part of a series about tech interview.
+Go to &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;tech-interview&#x2F;&quot;&gt;Tech interview&lt;&#x2F;a&gt; to read more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;⚠️ Since you are here I imagine that have a previous knowledge about programming, and programming language.
+If you don&#x27;t know anything about this, maybe this article is not for you yet.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;binary-search-an-overview&quot;&gt;Binary Search: an overview&lt;&#x2F;h1&gt;
+&lt;p&gt;Today is Jane Doe birthday, you need to call her. You have at your hands a agenda
+with a lot of names, and phone numbers. If you go for alphabetical order, this will take
+quite some time. You need to go throw the entire list of names on A, B, C, yeah, you got it.&lt;&#x2F;p&gt;
+&lt;p&gt;You need to reduce the time need for that, and that is what the binary search is about.
+If you open the agenda and check the middle name, you can decide if you want to check names
+after that, or below that, only at this small change you will reduce the time at half.&lt;&#x2F;p&gt;
+&lt;p&gt;Doing this operation again, you will take half of the remaining half. A lot faster, but how much?&lt;&#x2F;p&gt;
+&lt;p&gt;The first example you need to check the entire agenda, this is what we call a
+&lt;strong&gt;sequential search&lt;&#x2F;strong&gt; resulting in $O(n)$ solution.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;binary search&lt;&#x2F;strong&gt; has a $O(\log{}n)$ at the worst case.&lt;&#x2F;p&gt;
+&lt;p&gt;Just some quick comparation between both algorithms, where I add the value for &lt;em&gt;n&lt;&#x2F;em&gt;
+and the amount of steps:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Algorithm&lt;&#x2F;th&gt;&lt;th&gt;10&lt;&#x2F;th&gt;&lt;th&gt;1 000&lt;&#x2F;th&gt;&lt;th&gt;1 000 000&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Sequential Search&lt;&#x2F;td&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;1 000&lt;&#x2F;td&gt;&lt;td&gt;1 000 000&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Binary Search&lt;&#x2F;td&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;20&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;implementation-in-java&quot;&gt;Implementation in Java&lt;&#x2F;h2&gt;
+&lt;p&gt;We start with the entire list of values:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;var low = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;var high = sortedList.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;() - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;After that we check the value at the middle:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; middle = (low + high) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;var item = sortedList.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span&gt;(middle);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now we just need to decide if this value is higher, or lower than the one we are
+searching and continue from that. Now with the full code:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;List&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Integer&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; sortedList, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; target) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span&gt; low = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span&gt; high = sortedList.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;() - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(low &amp;lt;= high) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; middle = (low + high) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var&lt;&#x2F;span&gt;&lt;span&gt; item = sortedList.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span&gt;(middle);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;equals&lt;&#x2F;span&gt;&lt;span&gt;(target)) {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; middle;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compareTo&lt;&#x2F;span&gt;&lt;span&gt;(target) &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;            low = middle + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            high = middle - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can check the same code using generics at my &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gscavalcante&#x2F;algorithms-study&#x2F;blob&#x2F;master&#x2F;app&#x2F;src&#x2F;main&#x2F;java&#x2F;com&#x2F;gcavalcante&#x2F;search&#x2F;BinarySearch.java&quot;&gt;GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;problems&quot;&gt;Problems&lt;&#x2F;h2&gt;
+&lt;p&gt;Ops this section is in progress. 🤪&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>What is SOLID?</title>
+        <published>2023-10-10T00:00:00+00:00</published>
+        <updated>2024-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/solid/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/solid/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is part of a series about tech interview.
+Go to &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;tech-interview&#x2F;&quot;&gt;Tech interview&lt;&#x2F;a&gt; to read more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;what-is-solid&quot;&gt;What is SOLID?&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;em&gt;SOLID&lt;&#x2F;em&gt; is a acronym for five principles of Object Oriented Design, and stands for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#single-responsibility-principle-srp&quot;&gt;&lt;strong&gt;S&lt;&#x2F;strong&gt; - Single-responsibility Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#open-closed-principle-ocp&quot;&gt;&lt;strong&gt;O&lt;&#x2F;strong&gt; - Open-closed Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#liskov-substitution-principle-lsp&quot;&gt;&lt;strong&gt;L&lt;&#x2F;strong&gt; - Liskov Substitution Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#interface-segregation-principle-isp&quot;&gt;&lt;strong&gt;I&lt;&#x2F;strong&gt; - Interface Segregation Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;#dependency-inversion-principle-dip&quot;&gt;&lt;strong&gt;D&lt;&#x2F;strong&gt; - Dependency Inversion Principle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;⚠️ &lt;em&gt;Here you will see only the main phrase about every principle. The best place
+to get this information is from the article
+&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;The S.O.L.I.D Principles in Pictures&lt;&#x2F;a&gt;
+wrote by Ugonna Thelma&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;single-responsibility-principle-srp&quot;&gt;Single-Responsibility Principle (SRP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A class should have one, and only one, reason to change. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The idea behind the Single-Responsibility Principle (SRP) is that a class or module
+has a single responsibility or task to perform (Boris, 2023).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;open-closed-principle-ocp&quot;&gt;Open-Closed Principle (OCP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You should be able to extend a classes behavior, without modifying it. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;liskov-substitution-principle-lsp&quot;&gt;Liskov Substitution Principle (LSP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Derived classes must be substitutable for their base classes. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;interface-segregation-principle-isp&quot;&gt;Interface Segregation Principle (ISP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make fine grained interfaces that are client specific. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;dependency-inversion-principle-dip&quot;&gt;Dependency Inversion Principle (DIP)&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Depend on abstractions, not on concretions. (Martin, n.d.)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Oloruntoba, Samuel. (2020, September 21). SOLID: The First 5 Principles of Object Oriented Design. &lt;em&gt;Digital Ocean&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;conceptual-articles&#x2F;s-o-l-i-d-the-first-five-principles-of-object-oriented-design&quot;&gt;https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;conceptual-articles&#x2F;s-o-l-i-d-the-first-five-principles-of-object-oriented-design&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Martin, Robert C. (n.d.). The Principles of OOD. &lt;em&gt;butUncleBob&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;http:&#x2F;&#x2F;butunclebob.com&#x2F;ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;http:&#x2F;&#x2F;butunclebob.com&#x2F;ArticleS.UncleBob.PrinciplesOfOod&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Bodin, Boris. (2023, September 9). Understanding SOLID Principles. &lt;em&gt;Scub-Lab&lt;&#x2F;em&gt;.&amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;lab.scub.net&#x2F;understanding-solid-principles-9a0181e68b88&quot;&gt;https:&#x2F;&#x2F;lab.scub.net&#x2F;understanding-solid-principles-9a0181e68b88&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Thelma, Ugonna. (2020, May 18). The S.O.L.I.D Principles in Pictures. &lt;em&gt;Ugonna Thelma&lt;&#x2F;em&gt;.&amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&quot;&gt;https:&#x2F;&#x2F;medium.com&#x2F;backticks-tildes&#x2F;the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Object-oriented programming (OOP): an overview</title>
+        <published>2023-07-30T00:00:00+00:00</published>
+        <updated>2024-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/object-oriented-programming/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/object-oriented-programming/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is part of a series about tech interview.
+Go to &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;tech-interview&#x2F;&quot;&gt;Tech interview&lt;&#x2F;a&gt; to read more.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;⚠️ Since you are here I imagine that have a previous knowledge about programming, and programming language.
+If you don&#x27;t know anything about this, maybe this article is not for you yet.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;object-oriented-programming-oop-an-overview&quot;&gt;Object-oriented programming (OOP): an overview&lt;&#x2F;h1&gt;
+&lt;p&gt;Object-oriented Programming (OOP) is a programming paradigm that relies on concept of classes and objects (Nyakundi, 2022).
+Those concepts and the paradigms of OOP will be more explained in details.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;class-vs-object&quot;&gt;Class vs Object&lt;&#x2F;h2&gt;
+&lt;p&gt;When we model a problem in terms of objects in OOP, we create abstract definitions representing the types of objects we want to have in our system (Mozilla, n.d.).
+Those abstract definitions is what we call a &lt;strong&gt;class&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s imagine that we will create a trading card game (TCG).
+To make that we need some rules, and those rules are shared between the game.
+One of those rules are the &lt;strong&gt;cards&lt;&#x2F;strong&gt; entity, like the example below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;attack;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Check if this card is destroyed by the attacker.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; attacker card
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public boolean isDestroyedBy(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        return card.getAttack() &amp;gt; this.defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, I know that the &lt;strong&gt;Card&lt;&#x2F;strong&gt; have those variables and methods.
+Know I need to instantiate with data from real world.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;var knightOfKeyboard = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Knight of Keyboard&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;This programmer is a gentleman that always carry her own mechanical keyboard&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;850&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;900&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;var pmOfChaos = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Project Manager of Chaos&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Where this Project Manager go the place becomes a mess&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1200&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1000&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(knightOfKeyboard.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;isDestroyedBy&lt;&#x2F;span&gt;&lt;span&gt;(pmOfChaos)) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;println&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your card was destroyed&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;System&lt;&#x2F;span&gt;&lt;span&gt;.out.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;println&lt;&#x2F;span&gt;&lt;span&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your defense is better&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Those variables with the card is what we call an &lt;strong&gt;object&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;&#x2F;strong&gt;: Class is a template, containing variables and methods. Object is the instantiated class.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;paradigms-of-oop&quot;&gt;Paradigms of OOP&lt;&#x2F;h2&gt;
+&lt;p&gt;Now that you read about the difference between class and objects, it&#x27;s also important to know some paradigms of OOP.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;inheritance&quot;&gt;Inheritance&lt;&#x2F;h3&gt;
+&lt;p&gt;Our TCG is going on fire, but the players are talking that we have only character card.
+They are asking for another type. We will have know two types of cards: character card and app card.
+They share some variables and methods, but not all.&lt;&#x2F;p&gt;
+&lt;p&gt;To make simple and don&#x27;t repeat code, we will use one of the OOP paradigms, the inheritance.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;CharCard &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;attack;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Check if this card is destroyed by the attacker.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; attacker card
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public boolean isDestroyedBy(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        return card.getAttack() &amp;gt; this.defense;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;class AppCard extends Card {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    private final int modifier;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    &#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    &#x2F;**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * Apply modifier at some character card.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     * &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@param &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt; card thaw will be modified
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;     *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    public void modify(@NotNull final Card card) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        &#x2F;&#x2F; TODO implement
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;With the &lt;code&gt;AppCard&lt;&#x2F;code&gt; we can modify some information at the &lt;code&gt;CharCard&lt;&#x2F;code&gt;.
+Both of them is a &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We can say that &lt;code&gt;Card&lt;&#x2F;code&gt; is a &lt;strong&gt;superclass&lt;&#x2F;strong&gt; or &lt;strong&gt;parent class&lt;&#x2F;strong&gt; of both &lt;code&gt;CharCard&lt;&#x2F;code&gt;
+and &lt;code&gt;AppCard&lt;&#x2F;code&gt;. Also we can say that &lt;code&gt;CharCard&lt;&#x2F;code&gt; and &lt;code&gt;AppCard&lt;&#x2F;code&gt; are &lt;strong&gt;subclasses&lt;&#x2F;strong&gt; or
+&lt;strong&gt;child classes&lt;&#x2F;strong&gt; of &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We can &lt;em&gt;shuffle&lt;&#x2F;em&gt; both types at our deck, because both are subclasses of &lt;code&gt;Card&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;encapsulation&quot;&gt;Encapsulation&lt;&#x2F;h3&gt;
+&lt;p&gt;This concept we are already using since the first example, let&#x27;s see again:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;description;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;        constructor and getters
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;    *&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;See, we let only the responsible for the data to manipulate that. Only &lt;code&gt;Card&lt;&#x2F;code&gt;
+have access to the data &lt;code&gt;name&lt;&#x2F;code&gt;. This is what this concept is about.&lt;&#x2F;p&gt;
+&lt;p&gt;Encapsulation refers to the bundling of data and methods that operate on that
+data within a single unit (Geeks for Geeks, n.d.). We are hiding the
+implementations details, so the outside can&#x27;t see how it works, but can interact
+with the data by methods.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;abstraction&quot;&gt;Abstraction&lt;&#x2F;h3&gt;
+&lt;p&gt;The abstraction concept refers to the process of hiding the internal details,
+just describing things in simple terms.&lt;&#x2F;p&gt;
+&lt;p&gt;We can take the &lt;code&gt;List&lt;&#x2F;code&gt; for example, we have some methods like &lt;code&gt;add&lt;&#x2F;code&gt;, but we
+don&#x27;t know how it is implemented. We jus now that if we call this method sending
+some data as parameter, this data will be present at the list at the end.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;polymorphism&quot;&gt;Polymorphism&lt;&#x2F;h3&gt;
+&lt;p&gt;Polymorphism is the concept where an object behaves differently in different situations.&lt;&#x2F;p&gt;
+&lt;p&gt;There are two ways to achieve that, by &lt;em&gt;overriding&lt;&#x2F;em&gt;, or &lt;em&gt;overloading&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;difference-between-override-and-overload&quot;&gt;Difference between Override, and Overload&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;strong&gt;Override&lt;&#x2F;strong&gt; means that you will write a new behavior. Occurs on &lt;em&gt;run-time&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;To understand, let&#x27;s go back to our card game, let&#x27;s make a small change to the
+&lt;code&gt;Card&lt;&#x2F;code&gt; class, adding a &lt;code&gt;toString&lt;&#x2F;code&gt; method&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;abstract class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;toString&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt; name;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Yeap, nothing to drastic, but for the &lt;code&gt;CharCard&lt;&#x2F;code&gt; this is too shallow, we need more
+information. To make this, we will &lt;strong&gt;Override&lt;&#x2F;strong&gt; the &lt;code&gt;toString&lt;&#x2F;code&gt; method.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;CharCard &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Card &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; ..
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;toString&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;format&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;%s: %d&#x2F;%d&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;, name, attack, defense);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Every call to &lt;code&gt;toString&lt;&#x2F;code&gt; from &lt;code&gt;CharCard&lt;&#x2F;code&gt; will have this new information, but
+the behavior of &lt;code&gt;Card&lt;&#x2F;code&gt;, or &lt;code&gt;AppCard&lt;&#x2F;code&gt; will be the same, since we didn&#x27;t changed
+there.&lt;&#x2F;p&gt;
+&lt;p&gt;But the &lt;strong&gt;overload&lt;&#x2F;strong&gt; is different, we can add new methods with the same name, but
+different parameters.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, we are able to create two different constructors and still valid.
+We can choose which one we want at different places.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;java&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-java &quot;&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Deck &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;private final &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;List&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt; cards;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;Deck&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;() {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        cards &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;ArrayList&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;public &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;Deck&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;List&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ebcb8b;&quot;&gt;Card&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;cards&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;.cards &lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt; cards;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; getter
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eff1f5;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also, the &lt;strong&gt;overload&lt;&#x2F;strong&gt; happens at &lt;em&gt;compile-time&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Override&lt;&#x2F;em&gt;: Keep method signature, but change behavior&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Overload&lt;&#x2F;em&gt;: Two or more methods with same name, but different parameters&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Nyakundi, Hillay. (2022, September 6). OOP Meaning - What is Object-Oriented Programming?. &lt;em&gt;freeCodeCamp&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;what-is-object-oriented-programming&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.freecodecamp.org&#x2F;news&#x2F;what-is-object-oriented-programming&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Mozilla. (n.d.). Object-oriented programming. &lt;em&gt;MDN Web Docs&lt;&#x2F;em&gt;. &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Learn&#x2F;JavaScript&#x2F;Objects&#x2F;Object-oriented_programming&#x2F;&quot;&gt;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Learn&#x2F;JavaScript&#x2F;Objects&#x2F;Object-oriented_programming&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Geeks for Geeks. (n.d.). Encapsulation in Java. &lt;em&gt;Geeks for Geeks&lt;&#x2F;em&gt; . &amp;lt;&lt;a href=&quot;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;encapsulation-in-java&#x2F;&quot;&gt;https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;encapsulation-in-java&#x2F;&lt;&#x2F;a&gt;&#x2F;&amp;gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tech Interview</title>
+        <published>2023-07-30T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/tech-interview/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/tech-interview/</id>
+        <content type="html">&lt;p&gt;Interviews is also part of being a programmer (or almost anything), here you will see a compiled of articles to help you at this path.&lt;&#x2F;p&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;WARNING&lt;&#x2F;strong&gt; This article is &lt;em&gt;UNDER CONSTRUCTION&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;programming&quot;&gt;Programming&lt;&#x2F;h1&gt;
+&lt;p&gt;This is not only algorithms and data structures topics, must also cover the basics of programming, with topics such as:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;object-oriented-programming&#x2F;&quot;&gt;Object-oriented programing (OOP)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Design Patterns&lt;&#x2F;li&gt;
+&lt;li&gt;Clean code&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;solid&#x2F;&quot;&gt;SOLID&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;algorithms-and-data-structure&quot;&gt;Algorithms and Data structure&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;algorithms&#x2F;binary-search&#x2F;&quot;&gt;Binary Search&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;system-design&quot;&gt;System Design&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Client-Server Model&lt;&#x2F;li&gt;
+&lt;li&gt;Network Protocols&lt;&#x2F;li&gt;
+&lt;li&gt;Storage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;version&quot;&gt;Version&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;(&lt;em&gt;2023&#x2F;07&#x2F;30&lt;&#x2F;em&gt;) 🎉 Starting this project, with a few topics that I will write.&lt;&#x2F;li&gt;
+&lt;li&gt;(&lt;em&gt;2023&#x2F;10&#x2F;10&lt;&#x2F;em&gt;) 🪨 Added SOLID article link.&lt;&#x2F;li&gt;
+&lt;li&gt;(&lt;em&gt;2024&#x2F;05&#x2F;07&lt;&#x2F;em&gt;) 🔎 Added binary search article link.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tool Tips #1</title>
+        <published>2022-08-14T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/tool-tips-1/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/tool-tips-1/</id>
+        <content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;tooltip&lt;&#x2F;strong&gt;, ... is a common graphical user interface (GUI) element in which, when hovering over a screen element or component, a text box displays information about that element.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tooltip&quot;&gt;Wikipedia&lt;&#x2F;a&gt;, read on 2022-08-14&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I just tried to make some fun about the name, but to be more precise the title should be something more like &amp;quot;&lt;strong&gt;Tools that might help you too&lt;&#x2F;strong&gt;&amp;quot;. It is an article where I&#x27;ll show some useful software to do something. Yeah, pretty generic, right?&lt;&#x2F;p&gt;
+&lt;p&gt;In this article, I&#x27;ll show two apps that I use. The first one is about formatting a PC. It&#x27;s something trivial that we usually do over time, when we update to a new version of the OS, or  maybe when we want to try a different Linux distro. &lt;&#x2F;p&gt;
+&lt;p&gt;Last but not least, I&#x27;ll show a package manager for Windows.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;bootable-usb-drive-with-simple-steps-to-update&quot;&gt;Bootable USB drive with simple steps to update&lt;&#x2F;h1&gt;
+&lt;p&gt;I have already formated a lot of USB sticks to put another Linux distro or version of Windows in it. It takes time and it&#x27;s boring to do it every time: you install some software to help you create a bootable USB stick, or follow the commands with the terminal. To solve this, I&#x27;ve discovered &lt;a href=&quot;https:&#x2F;&#x2F;www.ventoy.net&#x2F;en&#x2F;index.html&quot;&gt;Ventoy&lt;&#x2F;a&gt; and it&#x27;s a lifesaver.&lt;&#x2F;p&gt;
+&lt;p&gt;After installing it in one USB drive, I just need to add the ISO to the right partition, and &lt;em&gt;voilà&lt;&#x2F;em&gt;, it&#x27;s ready!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-example.png#center&quot; alt=&quot;Windows Explorer at partition E: with three different images&quot; title=&quot;My Ventoy partition&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Example of the selection of ISO when booting through Ventoy:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ventoy-select-iso.png#center&quot; alt=&quot;Ventoy ISO selection screen with a list of different ISO to boot the PC from&quot; title=&quot;Ventoy screen&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;install-and-update-all-your-programs-at-once&quot;&gt;Install and update all your programs at once&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-brand.png#center&quot; alt=&quot;A small blue rock before the word Ninite in blue&quot; title=&quot;Ninite brand&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This software, called &lt;a href=&quot;https:&#x2F;&#x2F;ninite.com&#x2F;&quot;&gt;Ninite&lt;&#x2F;a&gt;, is a masterpiece made for Windows OS. It will help you install a lot of software with a single click. You just have to select the programs you want to install and Ninite will create a very small installer file for you. Plus, it will automatically reject all toolbars when installing the software.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;ninite-options.png#center&quot; alt=&quot;List of apps you can choose&quot; title=&quot;Ninite list of apps&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Run the Ninite installer and it&#x27;ll install all the programs you selected. Simple like that.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Git Submodules, an Overview</title>
+        <published>2022-08-08T00:00:00+00:00</published>
+        <updated>2023-10-10T00:00:00+00:00</updated>
+        <author>
+          <name>Gabriel Cavalcante</name>
+        </author>
+        <link rel="alternate" href="https://gcavalcante.com/posts/git-submodules-an-overview/" type="text/html"/>
+        <id>https://gcavalcante.com/posts/git-submodules-an-overview/</id>
+        <content type="html">&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;&#x2F;h1&gt;
+&lt;p&gt;My first contact with the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; was a happy accident when looking at how to create my blog. Reading the &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;&#x27;s documentation. It was recommended to use when adding a new theme to the project.&lt;&#x2F;p&gt;
+&lt;p&gt;With the flow to update, fix, and improve my blog, I had some issues understanding how the &lt;strong&gt;submodule&lt;&#x2F;strong&gt; works. So, I&#x27;ve decided to create this article with some information. Enjoy.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-a-submodule&quot;&gt;What is a submodule?&lt;&#x2F;h1&gt;
+&lt;p&gt;The submodule allows you to add another git project inside your project. But why? Have you ever tried to get some project to your project? Probably the approach will be: download the repository (&lt;em&gt;zip file&lt;&#x2F;em&gt;) and unzip your project. If you need to update, you&#x27;ll do it everything again. Seems like a lot of work, and the submodule will remove for you.&lt;&#x2F;p&gt;
+&lt;p&gt;This submodule will not be pushed with your commits. And when downloading the project will also download the submodule. The update will be one git command.&lt;&#x2F;p&gt;
+&lt;p&gt;But it&#x27;s not just that. You will be able to keep your custom codes in the library, making it easy to merge when a new version comes out.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;adding-a-submodule&quot;&gt;Adding a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;The command to add a submodule is a simple line:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule &amp;lt;url&amp;gt; &amp;lt;name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, you need more information before continuing. The &lt;strong&gt;URL&lt;&#x2F;strong&gt; is a git endpoint to download the project. And the &lt;strong&gt;name&lt;&#x2F;strong&gt; is how you want to have this submodule called on your project.&lt;&#x2F;p&gt;
+&lt;p&gt;Example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule https:&#x2F;&#x2F;github.com&#x2F;gscavalcante&#x2F;apollo.git themes&#x2F;apollo
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This execution will create a folder &lt;code&gt;themes&#x2F;apollo&lt;&#x2F;code&gt; with the content of this repository in the last commit at the root of your project. Since my example have a name separated by a slash (&lt;em&gt;&#x2F;&lt;&#x2F;em&gt;), it will create a folder with the submodule inside.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; README.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; content
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;│&lt;&#x2F;span&gt;&lt;span&gt;   └── about.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; sass
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; static
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├──&lt;&#x2F;span&gt;&lt;span&gt; templates
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; themes
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└──&lt;&#x2F;span&gt;&lt;span&gt; apollo
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt; directories, 2 files
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now you can use everything from this project on your own.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;h2&gt;
+&lt;p&gt;Another way to add the submodule is with a branch, so it&#x27;ll not stay at a specific &lt;em&gt;SHA1&lt;&#x2F;em&gt; when updating. To accomplish this&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -b &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;branch&amp;gt; &amp;lt;url&amp;gt; &amp;lt;name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But if you already have the submodule added, you can change the &lt;code&gt;.gitmodules&lt;&#x2F;code&gt; file, for example:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;.gitmodules&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-.gitmodules &quot;&gt;&lt;code class=&quot;language-.gitmodules&quot; data-lang=&quot;.gitmodules&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;[submodule &amp;quot;&amp;lt;name&amp;gt;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;path &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;path&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;url&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;branch &lt;&#x2F;span&gt;&lt;span&gt;= &amp;lt;branch&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Add the option &lt;strong&gt;branch&lt;&#x2F;strong&gt; with the one you want to get this submodule.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;update-a-submodule&quot;&gt;Update a Submodule&lt;&#x2F;h1&gt;
+&lt;p&gt;Update from a remote repository is easy when you track with a branch. For this, run the command below:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule update&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --remote
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;If your submodule is not following from a branch, then go back and read &lt;a href=&quot;https:&#x2F;&#x2F;gcavalcante.com&#x2F;posts&#x2F;git-submodules-an-overview&#x2F;#adding-from-a-branch&quot;&gt;Adding From a Branch&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-delete-a-submodule&quot;&gt;How to Delete a Submodule&lt;&#x2F;h1&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; rm &amp;lt;submodule-name&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But the old directory will stay at &lt;code&gt;.git&#x2F;modules&#x2F;&amp;lt;path-to_submodule&amp;gt;&lt;&#x2F;code&gt;. Delete this folder, and you can download another submodule with the same name without a problem.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;rm -rf&lt;&#x2F;span&gt;&lt;span&gt; .git&#x2F;modules&#x2F;&amp;lt;path-to_submodule&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+    </entry>
+</feed>
